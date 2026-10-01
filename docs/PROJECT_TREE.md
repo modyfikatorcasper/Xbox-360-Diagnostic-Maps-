@@ -1,29 +1,45 @@
-# Pierwsze drzewo projektu
+# Modi Diagnostic Lab — drzewo projektu
 
 ```text
-Xbox-360-Diagnostic-Maps-/
-├── README.md
+Modi-Diagnostic-Lab/
+├── maps/
+│   ├── xbox/
+│   │   ├── xbox-360/
+│   │   │   ├── trinity/
+│   │   │   ├── corona/
+│   │   │   ├── jasper/
+│   │   │   └── winchester/
+│   │   ├── xbox-one/              # Coming Soon
+│   │   └── xbox-series/           # Coming Soon
+│   ├── playstation/
+│   │   ├── ps3/                   # Coming Soon
+│   │   ├── ps4/                   # Coming Soon
+│   │   └── ps5/                   # Coming Soon
+│   └── nintendo/
+│       ├── switch/                # Coming Soon
+│       └── switch-2/              # Coming Soon
+│
+├── tools/
+│   ├── modi-flasher-360/          # Coming Soon
+│   ├── ps5-nor/                   # Coming Soon
+│   └── ps5-uart/                  # Coming Soon
+│
+├── modifications/
+│   ├── playstation/               # Coming Soon
+│   ├── xbox/                      # Coming Soon
+│   └── nintendo/                  # Coming Soon
+│
+├── controllers/
+│   ├── playstation/               # Coming Soon
+│   ├── xbox/                      # Coming Soon
+│   └── nintendo/                  # Coming Soon
+│
 ├── docs/
-│   ├── PROJECT_TREE.md
-│   └── SOURCES_AND_LICENSES.md
-├── data/
-│   └── xbox360/
-│       ├── trinity/
-│       │   └── README.md
-│       ├── corona/
-│       │   └── README.md
-│       ├── jasper/
-│       │   └── README.md
-│       └── winchester/
-│           └── README.md
-├── modules/
-│   └── README.md
 └── assets/
-    └── README.md
 ```
 
-## Założenie
+## Zasada
 
-`data/xbox360/` przechowuje dane właściwe dla konkretnych rewizji płyt. `modules/` opisuje funkcje wspólne dla wielu płyt, np. mapę płyty, linie zasilania, pomiary, wyszukiwarkę komponentów, RROD i sekcję PSU. `assets/` jest miejscem na własne grafiki, zdjęcia i zasoby interfejsu. `docs/` zawiera dokumentację projektu, źródła oraz informacje licencyjne.
+Najpierw wybieramy dział funkcjonalny: **Maps / Tools / Modifications / Controllers**. Dopiero wewnątrz dzielimy zawartość na producenta, rodzinę sprzętu i konkretną rewizję.
 
-To jest pierwszy szkielet. Kolejne katalogi powinny być dodawane dopiero wtedy, gdy pojawią się realne dane lub działający moduł.
+Narzędzia, które wymagają własnego kodu, buildów i release'ów, mogą później mieć osobne repozytoria. W Modi Diagnostic Lab pozostaje ich dokumentacja, status i punkt wejścia.
