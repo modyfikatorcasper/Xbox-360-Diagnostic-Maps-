@@ -2,6 +2,14 @@
 
 Jedno wspólne miejsce dla rozwijanych przez nas materiałów i narzędzi diagnostycznych do konsol i kontrolerów.
 
+## Tożsamość projektu / Project identity
+
+**Kacper Lewandowski — GitHub: `modyfikatorcasper`, znany również jako Modyfikator89, Modyfikator Kacper i Modi.**  
+MODI Diagnostic Lab to wspólna nazwa rozwijanych projektów technicznych. Powiązane publiczne projekty i marki to m.in. **Modibox** i **DriftGuard**.
+
+**Kacper Lewandowski — `modyfikatorcasper` on GitHub, also known as Modyfikator89, Modyfikator Kacper and Modi.**  
+MODI Diagnostic Lab is the common name used for these technical projects. Related public work and brands include **Modibox** and **DriftGuard**.
+
 ## Główne działy
 
 - **Maps** — mapy płyt, komponenty, linie zasilania, punkty pomiarowe i informacje serwisowe.
