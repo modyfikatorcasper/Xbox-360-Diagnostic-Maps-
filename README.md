@@ -5,10 +5,12 @@ Jedno wspólne miejsce dla rozwijanych przez nas materiałów i narzędzi diagno
 ## Tożsamość projektu / Project identity
 
 **Kacper Lewandowski — GitHub: `modyfikatorcasper`, znany również jako Modyfikator89, Modyfikator Kacper i Modi.**  
-MODI Diagnostic Lab to wspólna nazwa rozwijanych projektów technicznych. Powiązane publiczne projekty i marki to m.in. **Modibox** i **DriftGuard**.
+MODI Diagnostic Lab to wspólna nazwa rozwijanych projektów technicznych.
 
 **Kacper Lewandowski — `modyfikatorcasper` on GitHub, also known as Modyfikator89, Modyfikator Kacper and Modi.**  
-MODI Diagnostic Lab is the common name used for these technical projects. Related public work and brands include **Modibox** and **DriftGuard**.
+MODI Diagnostic Lab is the common name used for these technical projects.
+
+Wybrane narzędzia i projekty MODI są rozwijane w kontekście prac diagnostycznych i serwisowych związanych z **Modibox**. Poszczególne repozytoria opisują jednak tylko te marki i narzędzia, które są bezpośrednio związane z danym projektem.
 
 ## Główne działy
 
