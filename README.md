@@ -12,6 +12,12 @@ MODI Diagnostic Lab is the common name used for these technical projects.
 
 Wybrane narzędzia i projekty MODI są rozwijane w kontekście prac diagnostycznych i serwisowych związanych z **Modibox**. Poszczególne repozytoria opisują jednak tylko te marki i narzędzia, które są bezpośrednio związane z danym projektem.
 
+## Strona główna / Project portal
+
+**[OTWÓRZ MODI DIAGNOSTIC LAB / OPEN PROJECT PORTAL](https://modyfikatorcasper.github.io/Xbox-360-Diagnostic-Maps-/)**
+
+Portal prowadzi do opublikowanych narzędzi i dokumentacji. Każdy projekt zachowuje własne repozytorium, wersje i status testów.
+
 ## Główne działy
 
 - **Maps** — mapy płyt, komponenty, linie zasilania, punkty pomiarowe i informacje serwisowe.
