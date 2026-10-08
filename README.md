@@ -14,7 +14,7 @@ Wybrane narzędzia i projekty MODI są rozwijane w kontekście prac diagnostyczn
 
 ## Strona główna / Project portal
 
-**[OTWÓRZ MODI DIAGNOSTIC LAB / OPEN PROJECT PORTAL](https://modyfikatorcasper.github.io/Xbox-360-Diagnostic-Maps-/)**
+**[OTWÓRZ MODI DIAGNOSTIC LAB / OPEN PROJECT PORTAL](https://modyfikatorcasper.github.io/)**
 
 Portal prowadzi do opublikowanych narzędzi i dokumentacji. Każdy projekt zachowuje własne repozytorium, wersje i status testów.
 
