@@ -35,8 +35,14 @@ Modi-Diagnostic-Lab/
 │   └── nintendo/                  # Coming Soon
 │
 ├── docs/
+│   └── xbox-series/
+│       └── XBOX_LAB_1.0.1_RESEARCH_NOTES.md   # Xbox Lab v1.0.1 — XBFS/SBFS/U25/SMART/logs
 └── assets/
 ```
+
+## Xbox Lab — aktywne notatki badawcze
+
+- [`docs/xbox-series/XBOX_LAB_1.0.1_RESEARCH_NOTES.md`](xbox-series/XBOX_LAB_1.0.1_RESEARCH_NOTES.md) — aktualny plan Xbox Lab v1.0.1: Series XBFS, SBFS/U25, certyfikaty, NVMe SMART, System Support/logi, porównania dumpów i eksperyment provisioning Southbridge.
 
 ## Zasada
 
