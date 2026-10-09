@@ -2,6 +2,16 @@
 
 You are the engineering/research agent for **Xbox Series Diagnostic Universal Tool — SSD / XBFS / NOR / POST**.
 
+## Current Xbox Lab 1.0.1 roadmap
+
+Before planning new implementation work, also read:
+- `XBOX_LAB_1.0.1_ROADMAP_2026-10-09.md`
+- `RESEARCH_2026-10-09.md`
+- `DUMP_ANALYSIS_PROMPT.md`
+- `SERIES_X_WIRING_RESEARCH.md`
+
+The roadmap is the current consolidation point for Recovery Backup, Create Replacement SSD research, Series XBFS/NOR/SBFS work, Xbox One-family eMMC research and the RP2350/Modi Flasher direction.
+
 ## Primary case
 Xbox Series X repeatedly fails around:
 - `Applying ~84%`
