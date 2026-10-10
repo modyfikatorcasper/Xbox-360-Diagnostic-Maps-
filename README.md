@@ -29,6 +29,8 @@ Portal prowadzi do opublikowanych narzędzi i dokumentacji. Każdy projekt zacho
 
 Projekt jest rozwijany etapami. Sekcje, których jeszcze nie opublikowaliśmy, są oznaczone jako **Coming Soon**. Nie publikujemy danych jako zweryfikowanych, dopóki nie przejdą naszej weryfikacji.
 
+**Xbox 360 Console Maps — IN DEVELOPMENT:** [jeden moduł Trinity / Jasper V1](maps/xbox/xbox-360/console-maps/dist/index.html) z wyborem płyt, mapą PCB, kodami błędów i ścieżkami zasilania. To build do oceny; zakres niezweryfikowanych pozycji i warunki użycia zdjęć są opisane w [raporcie](maps/xbox/xbox-360/console-maps/AUDIT_REPORT.md) oraz [źródłach](maps/xbox/xbox-360/console-maps/SOURCES.md).
+
 Aktualne drzewo projektu: `docs/PROJECT_TREE.md`.
 
 > Uwaga: wcześniejsze katalogi `data/` i `modules/` są pozostałością pierwszego szkicu struktury. Nowy układ projektu opiera się na `maps/`, `tools/`, `modifications/` i `controllers/`.

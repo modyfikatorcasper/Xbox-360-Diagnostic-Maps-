@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071525">
+  <meta name="description" content="MODI Console Maps — przystępna mapa diagnostyczna Xbox 360 FAT i Slim.">
+  <title>MODI Console Maps — Xbox 360</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23071525'/%3E%3Cpath d='M6 22V10l10 7 10-7v12' fill='none' stroke='%2338bdf8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%232fcf8c'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Przejdź do treści</a>
+  <aside class="sidebar" aria-label="Nawigacja" data-i18n-aria="navigationLabel">
+    <div class="brand"><div class="brand-mark">M</div><div><strong>MODI</strong><span>CONSOLE MAPS</span></div></div>
+    <div class="revision-card"><span class="eyebrow" data-i18n="selectedConsole">WYBRANA KONSOLA</span><strong id="sideModel">XBOX 360 S · TRINITY</strong><span id="sideRevision">SLIM · 2010–2011</span></div>
+    <nav>
+      <a class="active" href="#start"><span>01</span><b data-i18n="navStart">Start</b></a>
+      <a href="#decoder"><span>02</span><b data-i18n="navError">Kod błędu</b></a>
+      <a href="#board"><span>03</span><b data-i18n="navBoard">Mapa płyty</b></a>
+      <a href="#power"><span>04</span><b data-i18n="navPower">Zasilanie / start</b></a>
+      <a href="#reference"><span>05</span><b data-i18n="navReference">Punkty i układy</b></a>
+    </nav>
+    <div class="sidebar-tip"><span class="status-dot"></span><p data-i18n="sidebarTip">Wybierz objaw, kod albo obszar. Każda ścieżka prowadzi do miejsca na PCB.</p></div>
+  </aside>
+
+  <main id="main">
+    <header class="topbar">
+      <div><span class="crumb">XBOX 360 / MODI CONSOLE MAPS</span><h1 data-i18n="title">Interfejs diagnostyczny</h1></div>
+      <div class="top-actions"><div class="language-switch" role="group" aria-label="Language"><button type="button" class="active" data-lang="pl" aria-pressed="true">POLSKI</button><button type="button" data-lang="en" aria-pressed="false">ENGLISH</button></div><button type="button" class="icon-button" id="contrastToggle" aria-label="Kontrast" data-i18n-aria="contrastLabel" aria-pressed="false">◐</button></div>
+    </header>
+
+    <section id="start" class="section-shell hero-shell">
+      <div class="hero-copy"><span class="kicker" data-i18n="heroKicker">XBOX 360 BOARD MAPS</span><h2 data-i18n="heroTitle">Mapy płyt głównych i baza napraw.</h2><p data-i18n="heroText">Wybierz model i rewizję. Interfejs łączy kody błędów, obszary PCB i kolejność uruchamiania.</p></div>
+      <div class="model-picker" role="group" aria-label="Model Xbox 360" data-i18n-aria="modelGroupLabel"><button class="model-option active" data-board="trinity"><span>SLIM</span><strong>Trinity</strong><small>Xbox 360 S · <span data-i18n="available">dostępna</span></small></button><button class="model-option" data-board="jasper"><span>FAT</span><strong>Jasper V1</strong><small>Xbox 360 · <span data-i18n="available">dostępna</span></small></button><button class="model-option planned" disabled><span>SLIM</span><strong>Corona</strong><small data-i18n="sourceRequired">Wymaga zweryfikowanych źródeł</small></button><button class="model-option planned" disabled><span>SLIM E</span><strong>Winchester</strong><small data-i18n="sourceRequired">Wymaga zweryfikowanych źródeł</small></button></div>
+      <div class="path-grid">
+        <button class="path-card" data-jump="decoder"><span class="path-no">01</span><div><strong data-i18n="pathError">Mam kod błędu</strong><small data-i18n="pathErrorSub">Odczytaj cztery wskazania pierścienia LED</small></div><i>→</i></button>
+        <button class="path-card" data-jump="board"><span class="path-no">02</span><div><strong data-i18n="pathBoard">Chcę zobaczyć płytę</strong><small data-i18n="pathBoardSub">Wybierz sekcję i obejrzyj zbliżenie</small></div><i>→</i></button>
+        <button class="path-card" data-jump="power"><span class="path-no">03</span><div><strong data-i18n="pathPower">Konsola źle się zachowuje</strong><small data-i18n="pathPowerSub">Rozpoznaj objaw i przejdź pomiary</small></div><i>→</i></button>
+      </div>
+    </section>
+
+    <section id="decoder" class="section-shell">
+      <div class="section-heading rol-heading"><div><span class="kicker">RING OF LIGHT</span><h2 data-i18n="rolTitle">Rozpoznawanie układu segmentów</h2><p data-i18n="rolIntro">Klikaj łuki G1–G4, aby odtworzyć wzór widoczny na pierścieniu. Układ odpowiada konsoli ustawionej poziomo.</p></div><div class="rol-orientation"><span data-i18n="horizontalPosition">POZYCJA POZIOMA</span><b>G1 ↖ · G2 ↗ · G3 ↙ · G4 ↘</b></div></div>
+      <div class="rol-workspace">
+        <article class="rol-ring-card">
+          <div class="rol-instruction"><span class="rol-pointer" aria-hidden="true">⌁</span><div><strong data-i18n="rolClickTitle">Kliknij segment</strong><small data-i18n="rolClickText">Włącz lub wyłącz łuk pierścienia</small></div></div>
+          <div class="rol-ring-stage"><div id="rolMainRing" class="rol-ring rol-ring-main" aria-label="Interaktywny Ring of Light"></div></div>
+          <div class="rol-axis-note"><b data-i18n="consoleFront">PRZÓD KONSOLI</b></div>
+          <p class="rol-geometry-note" data-i18n="rolGeometryNote">Każdy segment jest osobnym łukiem ćwiartki pierścienia — nie pojedynczą diodą.</p>
+        </article>
+        <aside class="rol-result-panel" id="rolResultPanel" aria-live="polite"></aside>
+      </div>
+      <div class="rol-examples-wrap"><div class="rol-examples-head"><h3 data-i18n="rolExamplesTitle">Przykładowe układy</h3><p data-i18n="rolExamplesText">Wybierz miniaturę, aby ustawić wzór na głównym pierścieniu.</p></div><div class="rol-examples" id="rolExamples"></div></div>
+      <div class="secondary-code-module">
+        <div class="secondary-code-head"><div><span class="eyebrow" data-i18n="secondaryCode">KOD DODATKOWY</span><h3 data-i18n="decoderTitle">Cztery odczyty pierścienia LED</h3><p data-i18n="decoderIntro">Dla każdego odczytu kliknij liczbę świecących segmentów. Cztery segmenty oznaczają cyfrę 0.</p></div><div class="legend-inline"><span><i class="mini-ring four"></i>4 = 0</span><span>1 = 1</span><span>2 = 2</span><span>3 = 3</span></div></div>
+        <div class="secondary-code-instructions"><span class="instruction-step">SYNC</span><p data-i18n="secondaryCodeHowTo">Gdy konsola pokazuje czerwony błąd, przytrzymaj SYNC. Naciśnij EJECT raz dla każdego z czterech odczytów i zapisz liczbę świecących ćwiartek. Zwolnij SYNC po READ 4.</p></div>
+        <div class="read-grid" id="ringSteps"></div>
+        <div class="decoder-bottom">
+          <div class="manual-code"><label for="codeInput" data-i18n="manualCode">Lub wpisz gotowy kod</label><div><input id="codeInput" maxlength="4" inputmode="numeric" pattern="[0-3]{4}" placeholder="0031"><button id="lookupButton" data-i18n="checkCode">Sprawdź</button></div><small data-i18n="codeRule">Kod ma cztery cyfry 0–3. Brak wpisu w bazie zawsze daje UNKNOWN.</small></div>
+          <article class="result-card" id="errorResult" aria-live="polite"></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="board" class="section-shell">
+      <div class="section-heading"><div><span class="kicker">BOARD MAP</span><h2 data-i18n="boardTitle">Mapa płyty i zbliżenia serwisowe</h2><p data-i18n="boardIntro">Kliknij kolorową sekcję. Najważniejsze oznaczenia są nanoszone bezpośrednio na fotografię.</p></div><div class="board-heading-tools"><span class="model-badge" id="boardBadge">SLIM · TRINITY · TOP</span><div class="side-switch" id="sideSwitch" role="group" aria-label="Strona PCB" data-i18n-aria="pcbSideLabel"><button class="active" data-side="top">TOP</button><button data-side="bottom">BOTTOM</button></div></div></div>
+      <div class="board-layout">
+        <div class="board-panel"><div class="board-toolbar"><span data-i18n="overviewPhoto">Widok całej płyty</span><span class="calibration-badge" id="calibrationBadge"></span></div><div class="board-overview" id="boardOverview"><img id="boardImage" src="assets/pcb-trinity-top.png" alt="Xbox 360 Trinity motherboard top"><svg id="railTraceLayer" class="rail-trace-layer" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg><div id="regionMarkers"></div><div id="railTraceKey" class="rail-trace-key" hidden></div></div><div class="board-legend"><span><i class="legend-dot logic"></i><b data-i18n="logic">logika</b></span><span><i class="legend-dot power"></i><b data-i18n="powerLegend">zasilanie</b></span><span><i class="legend-dot io"></i><b>I/O</b></span><span><i class="legend-dot memory"></i><b data-i18n="memory">pamięć</b></span></div><div class="calibration-note" id="calibrationNote"></div></div>
+        <aside class="detail-panel" id="regionDetail"></aside>
+      </div>
+      <aside class="diagnostic-context" id="diagnosticContext" aria-live="polite" hidden></aside>
+      <div class="photo-detail">
+        <div class="photo-detail-head"><div><span class="eyebrow" data-i18n="realCloseup">PRAWDZIWE ZBLIŻENIE PCB</span><h3 id="closeupTitle">XCGPU / U5E1</h3></div><div class="zoom-controls" aria-label="Zoom" data-i18n-aria="zoomControlsLabel"><button id="fitBoard" data-i18n="showFullBoard">Pokaż całą płytę</button><button id="zoomOut" aria-label="Pomniejsz" data-i18n-aria="zoomOutLabel">−</button><output id="zoomValue" aria-live="polite">100%</output><button id="zoomIn" aria-label="Powiększ" data-i18n-aria="zoomInLabel">+</button><button id="zoomReset" data-i18n="resetCloseup">Reset zbliżenia</button></div></div>
+        <div class="photo-viewport" id="photoViewport" tabindex="0" aria-label="Powiększalne zdjęcie PCB" data-i18n-aria="pcbZoomLabel"><div class="photo-world" id="photoWorld"><img id="closeupImage" src="assets/pcb-trinity-top.png" alt="PCB close-up"></div><div class="photo-labels" id="photoLabels"></div><span class="drag-hint" data-i18n="dragHint">Przeciągnij, aby przesunąć · rolka = zoom</span></div>
+        <div class="zoom-tabs" id="zoomTabs" aria-label="Logiczne zbliżenia" data-i18n-aria="logicalCloseupsLabel"></div>
+      </div>
+      <section class="component-explorer" id="componentExplorer" aria-labelledby="componentExplorerTitle">
+        <div class="component-explorer-head"><div><span class="eyebrow" data-i18n="componentDatabase">BAZA KOMPONENTÓW</span><h3 id="componentExplorerTitle" data-i18n="componentExplorerTitle">Elementy na fotografii PCB</h3><p data-i18n="componentExplorerIntro">Wyszukaj designator lub wartość. Wybrany element zostanie oznaczony bezpośrednio na zdjęciu.</p></div><div class="component-stats" id="componentStats"></div></div>
+        <div class="component-controls"><label class="sr-only" for="componentSearch" data-i18n="componentSearchLabel">Szukaj elementu</label><input id="componentSearch" data-i18n-placeholder="componentSearch" placeholder="Np. U5E1, L6C2, 820 UF"><select id="componentType" aria-label="Typ elementu" data-i18n-aria="componentTypeLabel"><option value="" data-i18n="allTypes">Wszystkie typy</option><option value="integrated-circuit">IC</option><option value="resistor">R</option><option value="capacitor">C</option><option value="inductor">L / FB</option><option value="transistor">Q</option><option value="diode">D</option><option value="connector">J</option><option value="test-point">TP / FT</option></select><label class="sr-only" for="componentSide" data-i18n="searchPcbSide">Strona PCB w wyszukiwarce</label><select id="componentSide" aria-label="Strona PCB w wyszukiwarce" data-i18n-aria="searchPcbSide" hidden><option value="all" data-i18n="searchBothSides">TOP + BOTTOM</option><option value="top">TOP</option><option value="bottom">BOTTOM</option></select><label class="sr-only" for="componentGroup" data-i18n="searchCircuitGroup">Zespół funkcjonalny</label><select id="componentGroup" aria-label="Zespół funkcjonalny" data-i18n-aria="searchCircuitGroup" hidden></select><label class="sr-only" for="componentArea" data-i18n="searchNeighborhood">Sąsiedztwo na płycie</label><select id="componentArea" aria-label="Sąsiedztwo na płycie" data-i18n-aria="searchNeighborhood" hidden></select></div>
+        <div class="component-note" id="componentNote"></div>
+        <div class="component-workspace">
+          <div><div class="component-list" id="componentList"></div><div class="component-pager" id="componentPager" aria-live="polite"></div></div>
+          <aside class="component-profile" id="componentProfile" aria-live="polite"></aside>
+        </div>
+      </section>
+    </section>
+
+    <section id="power" class="section-shell">
+      <div class="section-heading"><div><span class="kicker">POWER / BOOT</span><h2 data-i18n="symptomTitle">Co dokładnie robi konsola?</h2><p data-i18n="symptomIntro">Wybierz zachowanie pasujące do konsoli. Grafika pokazuje, o jaki stan chodzi.</p></div></div>
+      <div class="symptom-grid" id="symptomGrid"></div>
+      <section class="psu-module" id="psuStates" aria-labelledby="psuStatesTitle"><div class="psu-module-head"><div><span class="eyebrow" data-i18n="psuKicker">DIODA ZASILACZA</span><h3 id="psuStatesTitle" data-i18n="psuTitle">Jaki kolor pokazuje zasilacz?</h3><p data-i18n="psuIntro">Wybierz stan widoczny na zasilaczu, nie na przednim panelu konsoli.</p></div></div><div class="psu-layout"><div class="psu-state-grid" id="psuStateGrid"></div><aside class="psu-result" id="psuResult" aria-live="polite"></aside></div></section>
+      <div class="diagnosis-panel"><div class="diagnosis-head"><div><span class="eyebrow" id="flowEyebrow">OBJAW</span><h3 id="flowTitle"></h3><p id="flowIntro"></p></div><button class="secondary-button" id="resetFlow" data-i18n="restart">Zacznij od początku</button></div><div class="diagnosis-grid"><div class="meter-card"><div class="meter-display"><span id="meterLabel">CHECK 01</span><strong id="meterValue">PSU LED</strong><small id="meterExpected"></small></div><div class="probe red"></div><div class="probe black"></div></div><article class="question-card" id="questionCard"></article><aside class="diagnosis-result" id="diagnosisResult"></aside></div></div>
+      <div class="section-subheading"><span class="kicker" data-i18n="bootPathKicker">ŚCIEŻKA STARTOWA</span><h3 data-i18n="bootPathTitle">Od zasilacza do dashboardu</h3><p data-i18n="bootPathIntro">Kliknij etap, aby przejść do jego obszaru i punktów pomiarowych na fotografii.</p></div>
+      <div class="sequence" id="sequence"></div>
+      <aside class="sequence-detail" id="sequenceDetail" aria-live="polite"></aside>
+    </section>
+
+    <section id="reference" class="section-shell">
+      <div class="section-heading"><div><span class="kicker" data-i18n="referenceKicker">PUNKTY I UKŁADY</span><h2 data-i18n="referenceTitle">Szybka karta pomiarowa</h2><p data-i18n="referenceIntro">Wartości niepotwierdzone są oznaczone UNKNOWN — aplikacja ich nie zgaduje.</p></div><div class="state-tabs" role="tablist" aria-label="Stan pracy" data-i18n-aria="railStateTabsLabel"><button class="active" data-state="standby" role="tab" aria-selected="true" data-i18n="modeStandby">STANDBY</button><button data-state="poweron" role="tab" aria-selected="false" data-i18n="modePowerOn">PO WŁĄCZENIU</button><button data-state="run" role="tab" aria-selected="false" data-i18n="modeRun">PEŁNY START</button></div></div>
+      <div class="rail-grid" id="railGrid"></div>
+      <aside class="rail-detail" id="railDetail" aria-live="polite"></aside>
+      <div class="reference-grid"><div><div class="section-subheading"><h3 data-i18n="errorDb">Baza kodów</h3></div><div class="search-mini"><label class="sr-only" for="errorFilter" data-i18n="errorFilterLabel">Filtruj kody błędów</label><input id="errorFilter" data-i18n-placeholder="filterErrors" placeholder="Filtruj kod lub obszar"></div><div class="error-list" id="errorList"></div></div><div><div class="section-subheading"><h3 data-i18n="keyCircuits">Kluczowe układy</h3></div><div class="ic-grid" id="icGrid"></div></div></div>
+    </section>
+
+    <footer><div><strong>Modyfikator89 · Modyfikator Kacper · Modibox.pl</strong><span>Special Thanks: Lewy2041</span></div><div class="footer-links"><button id="openCredits" data-i18n="credits">Credits</button><button id="openSources" data-i18n="sourcesLicenses">Źródła i licencje</button></div></footer>
+  </main>
+  <dialog id="legalDialog"><form method="dialog"><button class="dialog-close" aria-label="Zamknij" data-i18n-aria="closeLabel">×</button></form><div id="legalContent"></div></dialog>
+  <script src="assets/trinity-components.js"></script>
+  <script src="assets/jasper-components.js"></script>
+  <script src="assets/component-profiles.js"></script>
+  <script src="assets/rol-module.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
