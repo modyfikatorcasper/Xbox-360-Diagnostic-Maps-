@@ -45,3 +45,13 @@ Test: TOP → BOTTOM → TOP; znaczniki, podpisy i trasa pozostają zgodne z wid
 Zgłoszenie użytkownika podczas oglądania aplikacji na telefonie: „Mostek południowy / SMC” tworzy nieestetyczny, długi prostokąt.
 Poprawka: zwęzić etykietę do bardziej kwadratowego kształtu, zawinąć tekst np. „Mostek” / „południowy” / „SMC”. Zachować czytelność i nie zasłaniać sąsiednich punktów.
 Test zamknięcia: sprawdzić polską etykietę na telefonie i desktopie, na obu stronach mapy; bez obcięcia tekstu i kolizji.
+
+## CM-006 — P1 — mapa przechwytuje przewijanie strony na telefonie
+Zgłoszone przez użytkownika podczas rzeczywistego korzystania na telefonie; nie odtworzono jeszcze niezależnie w teście mobilnym.
+Przesuwanie palcem po powiększalnej mapie przesuwa obraz zamiast strony. Użytkownik nie może łatwo przejść do dalszych sekcji i odbiera zachowanie jako zablokowanie interfejsu.
+Oczekiwane: domyślnie gest pionowy przewija stronę również nad mapą. Manipulację mapą włączać świadomie.
+Proponowane rozwiązanie: widoczny przycisk „Poruszaj mapą”, aktywny tryb z jednoznacznym „Gotowe” / „Wróć do przewijania strony”. Nie wymagać odkrywania ukrytego dwukliku. Użytkownik zaproponował podwójne stuknięcie jako możliwy wariant — to pomysł, nie ustalony gest.
+Test zamknięcia: telefon dotykowy, przewinięcie strony przez obszar mapy, świadome włączenie panoramowania i zoomu, wyjście z trybu, dotarcie do dalszych sekcji; brak pułapki gestów.
+
+## Powiązane nowe wymaganie — nawigacja mobilna
+Na górze łatwo dostępny wybór sekcji: Start, Kod błędu, Mapa płyty, Zasilanie/start, Punkty i układy. Użytkownik ma móc wejść bezpośrednio do wybranej części bez przewijania całego długiego widoku. Rozważyć pokazywanie tylko wybranej sekcji z zachowaniem stanu diagnostyki. To rozbudowa interfejsu, nie osobny potwierdzony błąd.
