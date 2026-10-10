@@ -1,0 +1,19 @@
+# Full local extraction of the user-supplied boardview stays off the hosted source repository.
+Xbox-360/Trinity/Sources/boardview-analysis.json
+
+# Original service sources, private archives and parser scratch data are inputs only.
+*.pdf
+*.cad
+*.brd
+*.zip
+*.rar
+*.7z
+.tmp-*/
+tmp/
+temp/
+work/
+private/
+source-docs/
+
+# Local hosting configuration is not part of the reviewable module.
+.openai/

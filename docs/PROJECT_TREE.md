@@ -5,6 +5,7 @@ Modi-Diagnostic-Lab/
 ├── maps/
 │   ├── xbox/
 │   │   ├── xbox-360/
+│   │   │   ├── console-maps/         # Jeden moduł Trinity/Jasper V1 — IN DEVELOPMENT
 │   │   │   ├── trinity/
 │   │   │   ├── corona/
 │   │   │   ├── jasper/
