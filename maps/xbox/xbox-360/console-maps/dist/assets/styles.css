@@ -106,3 +106,21 @@ nav a{font-size:14px}
 .sequence-point-picker button strong{color:var(--cyan);font:800 12px ui-monospace,monospace}
 .sequence-point-picker button small{margin-top:3px;color:var(--text);font-size:12px}
 .calibration-note{color:var(--muted);font-size:12px;line-height:1.45}
+
+/* Xbox 360 review theme: green is the interaction accent; amber/red keep diagnostic meaning. */
+:root{--blue:#137a4b;--cyan:#67e49f;--green:#50d68c}
+nav a:hover,nav a.active{background:#102e26}
+.model-option.active{background:#103628;box-shadow:inset 0 0 0 1px rgba(103,228,159,.25)}
+.ring-buttons button.active,.language-switch button.active,.state-tabs button.active,.side-switch button.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.zoom-tabs button.active{background:#164b33;border-color:var(--cyan)}
+.symptom-card.active,.symptom-card:hover,.component-row:hover,.component-row.active{background:#102e26}
+.read-progress-step.current{background:#103628;border-color:var(--cyan)}
+.sequence-step.active{background:#103628;box-shadow:inset 0 0 0 1px rgba(103,228,159,.2)}
+.rol-ring-main .rol-segment:hover{stroke:#46a975}
+.rol-ring-main .rol-segment:focus-visible{filter:drop-shadow(0 0 9px rgba(103,228,159,.55))}
+.photo-pin-focus{--pin:#67e49f}
+.photo-pin-focus:before{box-shadow:0 0 0 3px #071522,0 0 0 6px #67e49f}
+.photo-pin-focus span{border-color:#67e49f!important;background:#103628!important;box-shadow:0 0 0 1px #67e49f}
+.context-photo-focus{border-left-color:#67e49f;background:#102e26}
+.context-photo-focus strong{color:#9af2be}
+:where(a,button,input,select,summary,[tabindex]):focus-visible{outline-color:#9af2be}

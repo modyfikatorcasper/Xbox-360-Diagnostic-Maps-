@@ -1,5 +1,7 @@
 # MODI Console Maps — kandydat do audytu zewnętrznego
 
+**Aktualizacja statusu, 2026-10-10:** aplikacja jest udostępniana jako publiczny podgląd **IN DEVELOPMENT**, aby drugi recenzent mógł sprawdzić interfejs w przeglądarce. Nie oznacza to zakończenia audytu Jaspera ani rozstrzygnięcia rozbieżności oznaczeń licencji zdjęć. Poniższe starsze wzmianki o nieopublikowanej paczce opisują stan w chwili ich sporządzenia.
+
 ## Aktualizacja Jasper V1 — 2026-10-10
 
 Wyszukiwarka Jaspera obejmuje teraz wszystkie 1952 rekordy TOP/BOTTOM, filtr strony PCB, typ elementu, fizyczne sąsiedztwo i stronicowanie. Znane nazwy układów (np. Loki, NCP5331) są wyszukiwalne. Sąsiedztwo jest liczone z odległości w danych BRD i **nie** potwierdza funkcjonalnej grupy ani połączeń elektrycznych. Każdy z 1908 wyników `UNVERIFIED` otwiera zbliżenie z przerywanym kwadratem przewidywanej okolicy i kropką pośrodku, wyraźnie odmiennym od znacznika elementu sprawdzonego na zdjęciu. Etykieta na obrazie podaje oznaczenie i wartość ze schematu albo `UNKNOWN`. Diodowy filtr działa również dla rekordów z wcześniejszej wersji wygenerowanej bazy.

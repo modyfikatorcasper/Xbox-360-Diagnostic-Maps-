@@ -47,11 +47,11 @@ Test `tools/test-photo-closeups.mjs` pilnuje, aby kropki wszystkich 49 kadrów J
 
 Przejścia z raili, kodów, sekwencji i kart układów wybierają zbliżenie pasujące do oznaczenia wskazanego punktu. Jeśli etap obejmuje kilka zbliżeń, kontekst pokazuje odpowiednie karty; gdy punkt nie ma osobnej etykiety na zdjęciu, interfejs mówi o tym wprost. Macierz 96 takich przejść sprawdza `tools/test-closeup-routing.mjs`.
 
-Projekt jest przygotowywany do bezpłatnego udostępnienia społeczności, ale publikacja pozostaje wstrzymana do wspólnej akceptacji. Szablon danych dla Jasper, Trinity, Corona i Winchester opisano w `docs/DATA-MODEL.md`; mapy Corona i Winchester pozostają wyłączone do czasu pozyskania zweryfikowanych danych. Dokumenty źródłowe nie są częścią pakietu aplikacji. Szczegóły materiałów i licencji znajdują się w `SOURCES.md`.
+Projekt jest dostępny jako publiczny podgląd **IN DEVELOPMENT** do oceny działania, a nie jako kompletne, zweryfikowane wydanie serwisowe. Szablon danych dla Jasper, Trinity, Corona i Winchester opisano w `docs/DATA-MODEL.md`; mapy Corona i Winchester pozostają wyłączone do czasu pozyskania zweryfikowanych danych. Dokumenty źródłowe nie są częścią pakietu aplikacji. Szczegóły materiałów i licencji znajdują się w `SOURCES.md`.
 
 ## Image attribution
 
-Some PCB photographs used as visual reference backgrounds are sourced from third-party repair documentation and remain credited to their original photographer. Exact source pages, both conflicting licence notices, and the release hold are documented in [SOURCES.md](SOURCES.md#pcb-photo-sources). MODI Console Maps supplies separate diagnostic overlays, measurement data, error-code mapping, repair guidance and interaction. Those overlays do not change the photographs' attribution requirements. The local audit package is not cleared for public distribution.
+Some PCB photographs used as visual reference backgrounds are sourced from third-party repair documentation and remain credited to their original photographer. Exact source pages and both conflicting licence notices are documented in [SOURCES.md](SOURCES.md#pcb-photo-sources). MODI Console Maps supplies separate diagnostic overlays, measurement data, error-code mapping, repair guidance and interaction. Those overlays do not change the photographs' attribution requirements. The public review build does not claim that the licence discrepancy has been resolved.
 
 ## Credits
 

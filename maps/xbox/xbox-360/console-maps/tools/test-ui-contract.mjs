@@ -51,6 +51,9 @@ check(/function\s+resetBoardState\b/.test(app), 'board-specific state reset is m
 check(/vp\.addEventListener\('keydown'/.test(app), 'PCB viewport keyboard controls are missing');
 check(/aria-pressed/.test(app) && /aria-selected/.test(app), 'dynamic selection semantics are missing');
 check(/:focus-visible/.test(css), 'global focus-visible styling is missing');
+check(css.includes(':root{--blue:#137a4b;--cyan:#67e49f;--green:#50d68c}') &&
+  css.includes('.photo-pin-focus{--pin:#67e49f}'),
+  'active controls and focused PCB points must use the green review accent');
 check(/prefers-reduced-motion/.test(css), 'reduced-motion support is missing');
 check(/\.sr-only/.test(css), 'screen-reader-only utility is missing');
 for (const photo of ['Trinity_Top', 'Trinity_Bottom', 'Jasper_V1_Top', 'Jasper_V1_Bottom']) {
