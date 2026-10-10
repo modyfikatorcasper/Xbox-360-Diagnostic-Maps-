@@ -24,3 +24,32 @@ Hardware research target: U25 3.3V SPI NOR, Toledo SB schematic. Pinout: 1 CS#, 
 
 ## Today’s workflow
 User plans first 2–3 U25 dumps. After captures, compare hashes before interpreting offsets. Do not confuse U25 NOR with Xbox SSD/NVMe or Device Portal traces.
+
+## Product goals — what Xbox Lab must extract (developer brief)
+
+**Purpose:** Turn Xbox Series X/S diagnostics into evidence-based fault localization and repeatable comparisons, especially consoles stuck at 94% of an update. Do not promise repair or decoding of undocumented structures without proof.
+
+### Desired answers from each evidence source
+- **U25 SPI NOR:** discover real data structure/map from multiple verified dumps; identify stable vs variable ranges, possible version/build markers, per-console data, checksums, update/provisioning changes and correlations with boot/update failures. Treat every interpretation as a hypothesis until validated on multiple samples. Build a growing annotated offset database with confidence and supporting samples.
+- **SSD/NVMe:** determine controller/media health, temperatures, error-log events, unsafe shutdowns, GPT integrity, XBFS signatures and partition layout; flag anomalies and compare against known-good references. Distinguish thermal alerts from actual NAND degradation.
+- **Device Portal / ETW / WER / WPR (Dev Mode):** import system traces, crash reports and capability results; handle permission denials as 'unavailable', not 'no error'.
+- **UART/POST and optional cold-boot USB:** accept timestamped captures and correlate with other evidence; never label unsupported interfaces as confirmed.
+
+### User workflow in the new application
+1. Create case with console model, motherboard revision, firmware (if known), symptom, capture date and evidence origin.
+2. Import 2–3 U25 dumps from one board. Automatically validate sizes/hashes, mark MATCH/MISMATCH and block conclusions when reads are inconsistent.
+3. Compare confirmed U25 image against reference boards and before/after updates. Show hex view, changed offset intervals, byte counts, percentage changed, entropy, string candidates, bookmarks and exportable diff.
+4. Import SSD NVMe SMART/error log and GPT/partition metadata. Highlight critical warnings and anomalies, preserving raw source.
+5. Attach POST/UART/ETW/WER evidence as available. Build timeline of observable events and correlations, never fabricated causal chains.
+6. Produce case report with **observed fact / interpretation / confidence / next diagnostic test**, export JSON and HTML/Markdown; provide optional redaction for console-unique identifiers.
+
+### Specific 94% update investigation
+Collect at least one healthy reference and a faulty case; compare U25 images and SSD metadata before/after an update when feasible. Identify differences that *correlate* with failed update stage, not automatically assume causation. Include evidence matrix and prioritized next tests (storage, boot chain, firmware, communication). The application must never write or repair NOR/SSD as part of initial diagnostics.
+
+### Definition of done for next compilation
+- Working import, SHA-256 validation and byte-range U25 diff; meaningful errors for incomplete/bad captures.
+- Working SSD SMART/GPT metadata importer with health flags and evidence provenance.
+- Case/report export, regression fixtures, documented unsupported functionality.
+- Separate UI states: Verified, Suspected, Unknown, Unavailable. No hard-coded claims of decoded U25 offsets.
+
+**Immediate handoff:** implement these capabilities in the next Xbox Lab build, starting with read-only U25 capture verification and diff. Today's first 2–3 raw dumps will serve as the initial fixture set only after hashes match. Preserve originals unchanged.
