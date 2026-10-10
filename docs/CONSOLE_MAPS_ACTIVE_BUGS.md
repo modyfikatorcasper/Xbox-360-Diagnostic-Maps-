@@ -35,3 +35,13 @@ Potwierdzone wizualnie na Trinity: 1 przy wejściu zasilania, 2 przy regulatorac
 Problem użyteczności: użytkownik nie rozumie znaczenia numerów, linie mogą wyglądać jak fizyczne połączenia, numery zasłaniają podpisy obszarów. Przy oglądaniu XCGPU nadal widoczna jest trasa standby.
 Proponowana poprawka: czytelny tytuł „Kolejność sprawdzania: 5 V standby”, legenda 1–3 oraz przełącznik widoczności trasy. Pokazywać ją w kontekście wybranej diagnostyki, nie jako niewyjaśnioną stałą nakładkę.
 Test zamknięcia: na podstawowym widoku początkujący rozpoznaje cel numeracji; etykiety obszarów pozostają czytelne; trasa odpowiada aktywnemu kontekstowi.
+
+## Uwagi użytkownika do CM-004 — TOP/BOTTOM
+Przy przełączaniu przodu i tyłu numerowane kropki pozostają i mieszają się z oznaczeniami elementów. Zgłoszenie użytkownika; konkretne zachowanie po zmianie strony wymaga ponownego testu.
+Zachować zaakceptowane oznaczenia układów. Trasę diagnostyczną dopasować do strony PCB; nie sugerować fizycznej obecności elementu z przeciwnej strony. Jeśli prezentowana jest projekcja, jawnie ją oznaczyć i umożliwić ukrycie.
+Test: TOP → BOTTOM → TOP; znaczniki, podpisy i trasa pozostają zgodne z widoczną stroną.
+
+## CM-005 — P2 — zbyt szeroka polska etykieta mostka
+Zgłoszenie użytkownika podczas oglądania aplikacji na telefonie: „Mostek południowy / SMC” tworzy nieestetyczny, długi prostokąt.
+Poprawka: zwęzić etykietę do bardziej kwadratowego kształtu, zawinąć tekst np. „Mostek” / „południowy” / „SMC”. Zachować czytelność i nie zasłaniać sąsiednich punktów.
+Test zamknięcia: sprawdzić polską etykietę na telefonie i desktopie, na obu stronach mapy; bez obcięcia tekstu i kolizji.
