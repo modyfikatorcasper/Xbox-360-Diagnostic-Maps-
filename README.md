@@ -34,3 +34,14 @@ Projekt jest rozwijany etapami. Sekcje, których jeszcze nie opublikowaliśmy, s
 Aktualne drzewo projektu: `docs/PROJECT_TREE.md`.
 
 > Uwaga: wcześniejsze katalogi `data/` i `modules/` są pozostałością pierwszego szkicu struktury. Nowy układ projektu opiera się na `maps/`, `tools/`, `modifications/` i `controllers/`.
+
+## Console Maps — bieżące zadania po audycie
+
+Raport i wymagania są częścią projektu; poprawki pozostają do wdrożenia i odbioru.
+
+- [Audyt działania i obsługi](docs/CONSOLE_MAPS_UX_AUDIT_2026-10-10.md).
+- [Aktywne błędy z krokami odtworzenia](docs/CONSOLE_MAPS_ACTIVE_BUGS.md).
+- [Podział Łatwy / Zaawansowany i uproszczony dekoder](docs/CONSOLE_MAPS_EASY_ADVANCED.md).
+- [Zadanie wdrożeniowe #4](https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/issues/4).
+
+Najpierw poprawić nieaktualną diagnozę na mapie, niespójne zaznaczenia i przewijanie; następnie mobilne menu sekcji, jeden dekoder oraz tryby obsługi. Zamykać błędy dopiero po ponownym teście pod publicznym adresem; gesty wymagają odbioru na telefonie.
