@@ -69,3 +69,18 @@ Status: wymagania i plan; wpis nie potwierdza implementacji ani wdrożenia.
 - Modi PSX Lab, PS1/PS2 → RP2040: zebrać od wykonującego agenta nazwę bazowego firmware i diff, aby odróżnić istniejącą autodetekcję od własnych dodatków. Nie przypisywać autorstwa funkcji na podstawie samej kompilacji.
 - Modi PS5 to PS3: ODŁOŻONE. Cel: DualSense przez natywny Bluetooth PS3, PS/Home i podstawowe wibracje bez adaptera i ręcznego ładowania modułów. Najpierw analiza drogi raportu PS, ewentualnie kombinacji przycisków i VSH. Wybudzanie ze standby osobno.
 - Źródła do późniejszej analizy: https://github.com/Dobridp/DS45Pad , https://github.com/GabaRSk/XPAD-Revolution , https://github.com/ihasTaco/RosettaPad . Deklaracje autorów nie zastępują testów. Nie rozpoczynać implementacji odłożonego pomysłu bez nowego zadania.
+
+## 4. Console Maps — zadania po audycie UX 2026-10-10
+
+Status: **DO WDROŻENIA I ODBIORU**. Raport dodany do projektu na polecenie użytkownika. Nie oznacza zakończonej implementacji.
+
+Pełne wyniki: [audyt UX](CONSOLE_MAPS_UX_AUDIT_2026-10-10.md). Usterki: [aktywne błędy](CONSOLE_MAPS_ACTIVE_BUGS.md). Śledzenie wykonania: [issue #4](https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/issues/4).
+
+1. CM-001/002: synchronizacja diagnozy, zaznaczenia i zbliżenia; usuwanie starego kontekstu przy UNKNOWN i błędnym kodzie.
+2. CM-006/007: naturalne przewijanie nad mapą, jawny tryb manipulacji i wyjście oraz dostępny mobilny wybór sekcji.
+3. Jeden proces: „Znam kod” lub „Pomóż odczytać kod”; demonstracja pierścienia w opcjonalnej pomocy.
+4. Łatwy/Zaawansowany według [specyfikacji](CONSOLE_MAPS_EASY_ADVANCED.md), ze wspólnym stanem modelu, kodu i kroku.
+5. CM-004/005: trasy odpowiednie dla TOP/BOTTOM oraz kompaktowa polska etykieta mostka.
+6. CM-008: jeden czytelny następny krok dla NO LIGHT, najpierw kontrola źródła zasilania.
+
+Odbiór według checklisty raportu: działająca strona, regresja kodów, przejścia PCB i powrót, PL/EN, fizyczny telefon. Walidacja pustego kodu/123/9999 i przeliczenie 4 segmentów → 0 działały w audycie — zachować. Nie ogłaszać „zero błędów” na podstawie samego buildu.
