@@ -55,3 +55,24 @@ Test zamknięcia: telefon dotykowy, przewinięcie strony przez obszar mapy, świ
 
 ## Powiązane nowe wymaganie — nawigacja mobilna
 Na górze łatwo dostępny wybór sekcji: Start, Kod błędu, Mapa płyty, Zasilanie/start, Punkty i układy. Użytkownik ma móc wejść bezpośrednio do wybranej części bez przewijania całego długiego widoku. Rozważyć pokazywanie tylko wybranej sekcji z zachowaniem stanu diagnostyki. To rozbudowa interfejsu, nie osobny potwierdzony błąd.
+
+
+## Powtórny audyt 2026-10-10
+[Wyniki i scenariusze odbioru](CONSOLE_MAPS_UX_AUDIT_2026-10-10.md).
+- CM-001 i CM-002 odtworzone w działającej aplikacji; nadal otwarte.
+- CM-004: Trinity BOTTOM zachowuje numerowaną trasę; Jasper BOTTOM ją ukrywa. Nie uogólniać na obie płyty.
+- CM-006: potwierdzona przyczyna w źródle: touch-action:none, bezwarunkowe przechwycenie pointerdown i wheel. Test dotykowy na iPhonie nadal do wykonania.
+- Walidacja pustego kodu, 123 i 9999 obecnie pokazuje BŁĘDNY FORMAT. Nie dopisywać braku komunikatu jako aktualnego błędu.
+- Nie zamknięto CM-003 ani CM-005: bez nowego testu ich odbioru.
+
+## CM-007 — P1 — menu sekcji znika na telefonie
+Potwierdzone w styles.css: przy max-width:760px reguła .revision-card,.sidebar nav{display:none}; brak mobilnego zamiennika w badanym interfejsie. Użytkownik pozostaje z długą stroną, dodatkowo ograniczaną przez CM-006.
+Poprawka: dostępny mobilny wybór sekcji; zgodnie z wymaganiem użytkownika duże wejścia do modułów i bezpośrednie otwieranie wybranej części.
+Test zamknięcia: na 390 px przejść do każdej sekcji i wrócić bez przewijania całego dokumentu; menu dostępne również przy mapie. Zachować kod/model/etap.
+Status dowodu: inspekcja kodu + zgłoszenie użytkownika; fizyczne Safari do odbioru.
+
+## CM-008 — P2 — NO LIGHT oferuje sprzeczne następne działania
+Odtworzenie: Jasper → Zasilanie/start → NO LIGHT.
+Tekst mówi „Nie przechodź do pomiarów płyty, dopóki źródło nie działa”, ale ten sam panel wyświetla J9A1 pin 8 / FT8N1, 5 V i aktywny „Pokaż punkt na PCB”. Kreator pozostaje osobnym stanem standby.
+Poprawka: w Easy pierwszy krok to sprawdzenie źródła; dalsze pomiary po potwierdzeniu lub jako jawne szczegóły Advanced. Nie sugerować automatycznie, że brak świecenia oznacza rozpoznaną usterkę płyty.
+Test zamknięcia: NO LIGHT prowadzi jednym czytelnym następnym działaniem, bez sprzecznego wezwania do pomiaru PCB.
