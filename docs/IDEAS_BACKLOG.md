@@ -32,3 +32,40 @@ Planowany zakres:
 - później sprawdzić podstawowe metadane i dane strukturalne strony, aby pomóc wyszukiwarkom prawidłowo rozumieć informacje o projektach i publikacjach.
 
 **Uwaga:** sama sekcja prasowa ani metadane nie gwarantują, że każdy asystent AI odnajdzie publikację. Celem jest rzetelne, trwałe i łatwe do zweryfikowania źródło informacji.
+
+
+## 3. Ustalenia 2026-10-10 — działające mapy i kolejne moduły
+
+Status: wymagania i plan; wpis nie potwierdza implementacji ani wdrożenia.
+
+### Xbox 360 Console Maps
+- Jeden interfejs wyboru płyt; priorytet Trinity i Jasper. Corona i Winchester rozwijane sukcesywnie, oznaczone In Development.
+- Intensywnie zielone akcenty Xbox zamiast niebieskich: aktywne elementy, zaznaczenia, obramowania i hover. Zachować znaczenie kolorów napięć/legendy.
+- Easy i Advanced na wspólnej bazie. Easy prowadzi od rozpoznania konsoli/zasilacza na dobrych zdjęciach przez objawy i kod do pomiarów. Advanced pokazuje szczegóły techniczne.
+- Kod błędu powinien wskazywać obszar/element na konkretnej rewizji PCB oraz właściwe kolejne pomiary. Oddzielić znaczenie kodu, potwierdzone przyczyny i porady społeczności; podać źródło, rewizję, objawy i poziom weryfikacji. Liczby udokumentowanych przypadków tylko na podstawie dowodów.
+- Nie rozpoznano niepewnego kodu wypowiedzianego jako „0 chyba 23”; nie przypisywać go automatycznie kondensatorom.
+- Warunek dostarczenia: „Otwórz moduł” prowadzi do faktycznie działającej aplikacji jak lokalny podgląd, ze zdjęciami i punktami. Sprawdzić pod docelowym URL, przekazać link oraz commit. Raport testów i sam kod nie zastępują podglądu.
+- Przed rozbudową ocenić dokładność oznaczeń i zbliżeń Trinity/Jasper.
+
+### Modi Maps — PS5 Southbridge Maps
+- Projekt wskazany przez użytkownika jako priorytet do przygotowania do przeglądu i wydania.
+- Według użytkownika istnieje gotowa mapa i dwie wersje mostka z identycznym pinoutem. Przed publikacją sprawdzić konkretne oznaczenia i źródłową mapę; zgodność nie została tu niezależnie potwierdzona.
+- Zamiast ilustracji wykorzystać rzeczywiste zdjęcia obu układów i PCB. Pokazać A1, orientację oraz rozróżnienie widoku od góry i od strony kulek.
+- Kliknięcie kulki podświetla połączony punkt/element na PCB i pokazuje, co zbadać. Połączenia i pomiary muszą mieć źródło oraz status weryfikacji.
+- Wspomniany kontekst Swapper/NVS wymaga identyfikacji właściwego projektu; nie traktować jako gotowej instrukcji swapu.
+
+### Modi Maps — PS5 GDDR6 Maps
+- Drugi projekt na dzisiejszej liście. Nazwę „DDR6” interpretujemy roboczo jako GDDR6.
+- Zakres i materiały źródłowe do ustalenia; nie deklarować gotowej implementacji.
+- Późniejsza rozbudowa: wizualna mapa miejsc i metod pomiaru przy podejrzeniu zwarcia w obszarze pamięci. Zweryfikować wartości odniesienia, rewizję i warunki pomiaru. Sama niska rezystancja nie identyfikuje uszkodzonej kości.
+
+### Publikacja i organizacja
+- Wydać użyteczny, sprawdzony zakres jako stronę; resztę jawnie oznaczyć In Development. Przykładowy odbiór: kulka → punkt PCB → wskazówka pomiarowa.
+- Preferencja dla nowych projektów: prywatna baza robocza, publiczna aplikacja/pliki wymagane dla użytkownika; publiczne materiały prasowe osobno. Widoczność istniejących repo na razie bez zmian. Przed ewentualną migracją sprawdzić hosting i aktualizacje.
+- Publiczne dane przesyłane do przeglądarki można kopiować; prywatne repo nie ukrywa takich danych. Ograniczenie zakresu odpowiedzi serwera to pomysł do oceny, nie wdrożona ochrona.
+- Promocja na stronie i w mediach społecznościowych po potwierdzonym uruchomieniu; ten wpis nie oznacza wysłania publikacji.
+
+### Dalsze pomysły kontrolerowe
+- Modi PSX Lab, PS1/PS2 → RP2040: zebrać od wykonującego agenta nazwę bazowego firmware i diff, aby odróżnić istniejącą autodetekcję od własnych dodatków. Nie przypisywać autorstwa funkcji na podstawie samej kompilacji.
+- Modi PS5 to PS3: ODŁOŻONE. Cel: DualSense przez natywny Bluetooth PS3, PS/Home i podstawowe wibracje bez adaptera i ręcznego ładowania modułów. Najpierw analiza drogi raportu PS, ewentualnie kombinacji przycisków i VSH. Wybudzanie ze standby osobno.
+- Źródła do późniejszej analizy: https://github.com/Dobridp/DS45Pad , https://github.com/GabaRSk/XPAD-Revolution , https://github.com/ihasTaco/RosettaPad . Deklaracje autorów nie zastępują testów. Nie rozpoczynać implementacji odłożonego pomysłu bez nowego zadania.
