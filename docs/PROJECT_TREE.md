@@ -45,6 +45,11 @@ Modi-Diagnostic-Lab/
 
 - [`docs/xbox-series/XBOX_LAB_1.0.1_RESEARCH_NOTES.md`](xbox-series/XBOX_LAB_1.0.1_RESEARCH_NOTES.md) — aktualny plan Xbox Lab v1.0.1: Series XBFS, SBFS/U25, certyfikaty, NVMe SMART, System Support/logi, porównania dumpów i eksperyment provisioning Southbridge.
 
+## Xbox Series Diagnostic Universal Tool — uzupełnienie publicznego researchu (2026-10-12)
+
+- [Nowe źródła i workflowy POST / U25-SBFS / SPI trace / ODDFW / NVMe](../Xbox-Series-Diagnostic-Universal-Tool/PUBLIC_RESEARCH_ADDENDUM_2026-10-12.md) — dodatkowy raport z kontrolą źródeł, ograniczeniami i zadaniami implementacyjnymi; **nie oznacza wdrożenia ani testu na fizycznej konsoli**.
+- Bazowy opis projektu i plan testów pozostają w `docs/xbox-series/` oraz `Xbox-Series-Diagnostic-Universal-Tool/`.
+
 ## Zasada
 
 Najpierw wybieramy dział funkcjonalny: **Maps / Tools / Modifications / Controllers**. Dopiero wewnątrz dzielimy zawartość na producenta, rodzinę sprzętu i konkretną rewizję.
