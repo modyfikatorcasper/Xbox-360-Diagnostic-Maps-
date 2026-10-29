@@ -84,3 +84,15 @@ Pełne wyniki: [audyt UX](CONSOLE_MAPS_UX_AUDIT_2026-10-10.md). Usterki: [aktywn
 6. CM-008: jeden czytelny następny krok dla NO LIGHT, najpierw kontrola źródła zasilania.
 
 Odbiór według checklisty raportu: działająca strona, regresja kodów, przejścia PCB i powrót, PL/EN, fizyczny telefon. Walidacja pustego kodu/123/9999 i przeliczenie 4 segmentów → 0 działały w audycie — zachować. Nie ogłaszać „zero błędów” na podstawie samego buildu.
+
+## 5. Mapy Southbridge — aktualizacja 2026-10-29 / Southbridge Maps update
+
+Na polecenie użytkownika opublikowano [dział Mapy Southbridge / Southbridge Maps](../maps/playstation/ps5/southbridge/README.md) po polsku i angielsku oraz dodano linki w dokumentacji i kartę w portalu Maps. Zapisano ustalenia użytkownika: dwie wersje ze wspólnym układem kulek BGA/pinoutem, różnice w obsłudze HDMI i selektorze NVS oraz istnienie Swappera. Nie przypisano nieustalonych oznaczeń układów ani konkretnego narzędzia. Panel z pełną obsługą Southbridge i innych elementów różnych rewizji pozostaje **IN DEVELOPMENT**.
+
+Published the bilingual Southbridge Maps section, documentation links and a portal Maps card at the user's request. Recorded the user's findings about the shared BGA layout/pinout, HDMI/NVS selector differences and an existing Swapper. Exact chip markings and the specific tool are not identified. The panel and broader component/revision support remain **IN DEVELOPMENT**.
+
+Weryfikacja: odczyt zapisanych plików z GitHuba, zgodność treści PL/EN i celów linków. Aktualizacja obejmuje dokumentację i zapowiedź; nie obejmuje testów sprzętowych ani odbioru interaktywnego panelu.
+
+Verification: GitHub read-back of saved files, PL/EN content and link targets. This update covers documentation and an announcement, not hardware tests or interactive-panel acceptance.
+
+Commity dokumentacji: `0b59adc8126c79db54cffcc2971be05615a40c75`, `f4bd264e205c25ae5ea8144517fff4cccb3e078d`.
