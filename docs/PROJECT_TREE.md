@@ -15,7 +15,8 @@ Modi-Diagnostic-Lab/
 │   ├── playstation/
 │   │   ├── ps3/                   # Coming Soon
 │   │   ├── ps4/                   # Coming Soon
-│   │   └── ps5/                   # Coming Soon
+│   │   └── ps5/                   # PL/EN — IN DEVELOPMENT
+│   │       └── southbridge/       # Mapy Southbridge / Southbridge Maps — panel wkrótce
 │   └── nintendo/
 │       ├── switch/                # Coming Soon
 │       └── switch-2/              # Coming Soon
@@ -49,6 +50,10 @@ Modi-Diagnostic-Lab/
 
 - [Nowe źródła i workflowy POST / U25-SBFS / SPI trace / ODDFW / NVMe](../Xbox-Series-Diagnostic-Universal-Tool/PUBLIC_RESEARCH_ADDENDUM_2026-10-12.md) — dodatkowy raport z kontrolą źródeł, ograniczeniami i zadaniami implementacyjnymi; **nie oznacza wdrożenia ani testu na fizycznej konsoli**.
 - Bazowy opis projektu i plan testów pozostają w `docs/xbox-series/` oraz `Xbox-Series-Diagnostic-Universal-Tool/`.
+
+## PS5 Southbridge Maps — 2026-10-29
+
+- [Mapy Southbridge / Southbridge Maps](../maps/playstation/ps5/southbridge/README.md) — zapowiedź PL/EN, dwie wersje mostka ze wspólnym pinoutem, Swapper i kontekst selektora HDMI w NVS; panel oraz obsługa innych elementów i rewizji płyt w przygotowaniu / PL/EN announcement, two variants with a shared pinout, Swapper and HDMI selector context in NVS; panel and support for further components and board revisions in development.
 
 ## Zasada
 
